@@ -1,0 +1,175 @@
+<section class="plan-features">
+    <div class="plan-info-table">
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                        <div class="plan-fet">
+                            <p>Plan <span>features</span></p>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="bronze-plan plan">
+                            <h3 class="title">BRONZE</h3>
+
+                            <!-- Prices -->
+                            <div class="price">
+                                <span class="amount">#500</span>
+                                <span class="rate">Per month</span>
+                            </div>
+                            <!-- Activation button -->
+                            <button class="activation-btn bronze-activation-btn">Activate</button>
+                            <p class="arrow" (click) ="toggleBronze()">^</p>
+                        </div>
+                        <div class="mobile-plans" *ngIf="showBronze">
+                                    <a class="colorRow">
+                                        <td id="name">Loan</td><td class="itm">50k-150k naira</td>
+                                    </a>
+                                    <a *ngFor="let item of firstRow" [ngClass]="{ 'colorRow': item.hasColor}" >
+                                        <td id="name">{{item.title}}</td> <td class="checks"><img *ngIf="item.isBronzeSupported" src="../../assets/icons/check.svg"> </td>
+                                    </a>
+                                    <a>
+                                        <td id="name">Bank Statement</td><td class="itm">200k-400k naira</td>
+                                    </a>
+                                    <a *ngFor="let item of secondRow" [ngClass]="{ 'colorRow': item.hasColor}" >
+                                        <td id="name">{{item.title}}</td> <td class="checks"><img *ngIf="item.isBronzeSupported" src="../../assets/icons/check.svg"> </td>
+                                    </a>
+                                    <a class="colorRow">
+                                        <td id="name">Eight Free Country Destination</td><td class="itm">Just 1</td>
+                                    </a>
+                                    <a *ngFor="let item of thirdRow" [ngClass]="{ 'colorRow': item.hasColor}">
+                                        <td id="name">{{item.title}}</td> <td class="checks"><img *ngIf="item.isBronzeSupported" src="../../assets/icons/check.svg"> </td>
+                                    </a>
+                                    <a>
+                                        <td id="name">Gold Investor</td><td>  </td >
+                                    </a>
+                                    <a *ngFor="let item of fourthRow" [ngClass]="{ 'colorRow': item.hasColor}" >
+                                        <td id="name">{{item.title}}</td> <td class="checks"><img *ngIf="item.isBronzeSupported" src="../../assets/icons/check.svg"> </td> 
+                                    </a>
+                        
+                        </div>
+                    </td>
+
+                    <td>
+                        <div class="silver-plan plan">
+                            <h3 class="title">Silver</h3>
+
+                            <!-- Prices -->
+                            <div class="price">
+                                <span class="amount">#2,000</span>
+                                <span class="rate">Per month</span>
+                            </div>
+
+                            <!-- Activation button -->
+                            <button class="activation-btn silver-activation-btn">Activate</button>
+                            <p class="arrow" (click) ="toggleSilver()">^</p>
+                        </div>
+                        <div class="mobile-plans " *ngIf="showSilver">
+                            <a class="colorRow">
+                                <td id="name">Loan</td><td class="gold-item">50k - 4M Naira</td>
+                            </a>
+                            <a *ngFor="let item of firstRow" [ngClass]="{ 'colorRow': item.hasColor}" >
+                                <td id="name">{{item.title}}</td><td class="checks"><img *ngIf="item.isGoldSupported" src="../../assets/icons/purple-check.svg"> </td> 
+                            </a>
+                            <a>
+                                <td id="name">Bank Statement</td><td  class="gold-item">200k - 1M Naira</td>
+                            </a>
+                            <a *ngFor="let item of secondRow" [ngClass]="{ 'colorRow': item.hasColor}" >
+                                <td id="name">{{item.title}}</td> <td class="checks"><img *ngIf="item.isGoldSupported" src="../../assets/icons/purple-check.svg"> </td> 
+                            </a>
+                            <a class="colorRow">
+                                <td id="name">Eight Free Country Destination</td><td class="gold-item">Icon here</td>
+                            </a>
+                            <a *ngFor="let item of thirdRow" [ngClass]="{ 'colorRow': item.hasColor}" >
+                                <td id="name">{{item.title}}</td> <td class="checks"><img *ngIf="item.isGoldSupported" src="../../assets/icons/purple-check.svg"> </td> 
+                            </a>
+                            <a>
+                                <td id="name">Gold Investor</td><td class="gold-item">50k - 4M Naira</td>
+                            </a>
+                            <a *ngFor="let item of fourthRow" [ngClass]="{ 'colorRow': item.hasColor}" >
+                                <td id="name">{{item.title}}</td> <td class="checks"><img *ngIf="item.isGoldSupported" src="../../assets/icons/purple-check.svg"> </td> 
+                            </a>
+                        </div>
+                    </td>
+
+                    <td>
+                        <!-- Gold activation plan -->
+                        <div class="gold-plan plan">
+                            <h3 class="title">Gold</h3>
+
+                            <!-- Prices -->
+                            <div class="price">
+                                <span class="amount">#2,500</span>
+                                <span class="rate">Per month</span>
+                            </div>
+
+                            <!-- Activation button -->
+                            <button class="activation-btn gold-activation-btn">Activate</button>
+                            <p class="arrow" (click) ="toggleGold()">^</p>
+                        </div>
+                        
+                        <div class="mobile-plans" *ngIf="showGold">
+                            <a class="colorRow">
+                                <td id="name">Loan</td><td class="gold-item">50k - 4M Naira</td>
+                            </a>
+                            <a *ngFor="let item of firstRow" [ngClass]="{ 'colorRow': item.hasColor}" >
+                                <td id="name">{{item.title}}</td> <td class="checks"><img *ngIf="item.isSilverSupported" src="../../assets/icons/blue-check.svg"> </td>  
+                            </a>
+                            <a>
+                                <td id="name">Bank Statement</td><td class="silver-itm">200k - 1M Naira</td>
+                            </a>
+                            <a *ngFor="let item of secondRow" [ngClass]="{ 'colorRow': item.hasColor}" >
+                                <td id="name">{{item.title}}</td><td class="checks"><img *ngIf="item.isSilverSupported" src="../../assets/icons/blue-check.svg"> </td>  
+                            </a>
+                            <a class="colorRow">
+                                <td id="name">Eight Free Country Destination</td><td class="itm">Just 1</td>
+                            </a>
+                            <a *ngFor="let item of thirdRow" [ngClass]="{ 'colorRow': item.hasColor}" >
+                                <td id="name">{{item.title}}</td><td class="checks"><img *ngIf="item.isSilverSupported" src="../../assets/icons/blue-check.svg"> </td> 
+                            </a>
+                            <a>
+                                <td id="name">Gold Investor</td><td>  </td >
+                            </a>
+                            <a *ngFor="let item of fourthRow" [ngClass]="{ 'colorRow': item.hasColor}" >
+                                  <td id="name">{{item.title}}</td><td class="checks"><img *ngIf="item.isSilverSupported" src="../../assets/icons/blue-check.svg"> </td> 
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            </thead>
+            <tbody class="mobile">
+            </tbody>
+            <tbody>
+                <tr class="colorRow">
+                    <td id="name">Loan</td><td class="itm">50k-150k naira</td><td class="silver-itm">50k - 2M Naira</td><td class="gold-item">50k - 4M Naira</td>
+                </tr>
+                <tr *ngFor="let item of firstRow" [ngClass]="{ 'colorRow': item.hasColor}" >
+                    <td id="name">{{item.title}}</td> <td class="checks"><img *ngIf="item.isBronzeSupported" src="../../assets/icons/check.svg"> </td> <td class="checks"><img *ngIf="item.isSilverSupported" src="../../assets/icons/blue-check.svg"> </td> <td class="checks"><img *ngIf="item.isGoldSupported" src="../../assets/icons/purple-check.svg"> </td> 
+                </tr>
+                <tr>
+                    <td id="name">Bank Statement</td><td class="itm">200k-400k naira</td><td class="silver-itm">200k - 1M Naira</td><td  class="gold-item">200k - 1M Naira</td>
+                </tr>
+                <tr *ngFor="let item of secondRow" [ngClass]="{ 'colorRow': item.hasColor}" >
+                    <td id="name">{{item.title}}</td> <td class="checks"><img *ngIf="item.isBronzeSupported" src="../../assets/icons/check.svg"> </td> <td class="checks"><img *ngIf="item.isSilverSupported" src="../../assets/icons/blue-check.svg"> </td> <td class="checks"><img *ngIf="item.isGoldSupported" src="../../assets/icons/purple-check.svg"> </td> 
+                </tr>
+                <tr class="colorRow">
+                    <td id="name">Eight Free Country Destination</td><td class="itm">Just 1</td><td class="silver-itm">Just 3</td><td class="gold-item">Icon here</td>
+                </tr>
+                <tr *ngFor="let item of thirdRow" [ngClass]="{ 'colorRow': item.hasColor}" >
+                    <td id="name">{{item.title}}</td> <td class="checks"><img *ngIf="item.isBronzeSupported" src="../../assets/icons/check.svg"> </td> <td class="checks"><img *ngIf="item.isSilverSupported" src="../../assets/icons/blue-check.svg"> </td> <td class="checks"><img *ngIf="item.isGoldSupported" src="../../assets/icons/purple-check.svg"> </td> 
+                </tr>
+                <tr>
+                    <td id="name">Gold Investor</td><td>  </td ><td class="silver-itm">Silver Investor</td><td class="gold-item">50k - 4M Naira</td>
+                </tr>
+                <tr *ngFor="let item of fourthRow" [ngClass]="{ 'colorRow': item.hasColor}" >
+                    <td id="name">{{item.title}}</td> <td class="checks"><img *ngIf="item.isBronzeSupported" src="../../assets/icons/check.svg"> </td> <td class="checks"><img *ngIf="item.isSilverSupported" src="../../assets/icons/blue-check.svg"> </td> <td class="checks"><img *ngIf="item.isGoldSupported" src="../../assets/icons/purple-check.svg"> </td> 
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+
+
