@@ -5,6 +5,7 @@
     width: 100%;
     background-color: white;
     margin-bottom: 50px;
+    left: 0;
     // height: 50px;
 }
 
@@ -15,7 +16,7 @@
         position: relative;
         width: 100%;
         height: 70vh;
-        margin-bottom: 1900px;
+        margin-bottom: 2000px;
         .intro{
             display: flex;
             // align-item: center;
@@ -86,7 +87,8 @@
             justify-content: center;
             .in{
                 text-align: center;
-                padding: 0px 40px;
+                padding-top: 40px;
+                padding-bottom: 50px;
                 h2{
                     padding: 0px;
                     margin-bottom: 0px;
@@ -119,5 +121,8 @@
             // display: none;
         }
     }
+  }
+  .footer{
+      margin-top: 50px;
   }
 

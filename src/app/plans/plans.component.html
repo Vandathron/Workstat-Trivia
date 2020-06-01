@@ -15,15 +15,16 @@
 
                             <!-- Prices -->
                             <div class="price">
-                                <span class="amount">#500</span>
+                                <span class="amount"><span>&#8358;</span>500</span>
                                 <span class="rate">Per month</span>
                             </div>
                             <!-- Activation button -->
                             <button class="activation-btn bronze-activation-btn">Activate</button>
-                            <p class="arrow" (click) ="toggleBronze()">^</p>
+                            <p class="arrow" (click) ="toggleBronze()"><i class="{{showBronze? 'fa fa-angle-up': 'fa fa-angle-down'}}"></i></p>
                         </div>
                         <div class="mobile-plans" *ngIf="showBronze">
-                                    <a class="colorRow">
+                            <p>Plan <span>features</span></p>
+                            <a class="colorRow">
                                         <td id="name">Loan</td><td class="itm">50k-150k naira</td>
                                     </a>
                                     <a *ngFor="let item of firstRow" [ngClass]="{ 'colorRow': item.hasColor}" >
@@ -54,18 +55,18 @@
                     <td>
                         <div class="silver-plan plan">
                             <h3 class="title">Silver</h3>
-
                             <!-- Prices -->
                             <div class="price">
-                                <span class="amount">#2,000</span>
+                                <span class="amount"><span>&#8358;</span>2,000</span>
                                 <span class="rate">Per month</span>
                             </div>
 
                             <!-- Activation button -->
                             <button class="activation-btn silver-activation-btn">Activate</button>
-                            <p class="arrow" (click) ="toggleSilver()">^</p>
+                            <p class="arrow" (click) ="toggleSilver()"><i class="{{showSilver? 'fa fa-angle-up': 'fa fa-angle-down'}}"></i></p>
                         </div>
                         <div class="mobile-plans " *ngIf="showSilver">
+                            <p>Plan <span>features</span></p>
                             <a class="colorRow">
                                 <td id="name">Loan</td><td class="gold-item">50k - 4M Naira</td>
                             </a>
@@ -100,16 +101,17 @@
 
                             <!-- Prices -->
                             <div class="price">
-                                <span class="amount">#2,500</span>
+                                <span class="amount"><span>&#8358;</span>2,500</span>
                                 <span class="rate">Per month</span>
                             </div>
 
                             <!-- Activation button -->
                             <button class="activation-btn gold-activation-btn">Activate</button>
-                            <p class="arrow" (click) ="toggleGold()">^</p>
+                            <p class="arrow" (click) ="toggleGold()"><i class="{{showGold? 'fa fa-angle-up': 'fa fa-angle-down'}}"></i></p>
                         </div>
                         
                         <div class="mobile-plans" *ngIf="showGold">
+                            <p>Plan <span>features</span></p>
                             <a class="colorRow">
                                 <td id="name">Loan</td><td class="gold-item">50k - 4M Naira</td>
                             </a>
