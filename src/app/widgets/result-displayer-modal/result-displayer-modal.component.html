@@ -1,0 +1,6 @@
+<div class="result">
+    <p class="name">{{result.userName}} : {{result.id}}</p>
+    <p class="mark">SCORE: {{result.mark}}%</p>
+    <p class="mark" [ngStyle]="{'color': result.mark >=75 ? 'green':'red'}">{{result.mark >= 75 ? 'PASS' : 'FAIL'}}</p>
+<button mat-raised-button color="warn" style="text-align: center; margin: auto auto;" (click) = "close()">Close</button>
+</div>

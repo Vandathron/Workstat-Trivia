@@ -1,0 +1,18 @@
+<div class="main">
+    <mat-card class="full">
+        <p class="instruction">Fill your details to start this trivia</p>
+        <form [formGroup]="userDetails" (ngSubmit) = "save()">
+            <mat-form-field appearance="fill">
+                <mat-label>Enter name</mat-label>
+                <input matInput formControlName="name" matInput placeholder="Ex. Nougat">
+            </mat-form-field>
+    
+            <mat-form-field appearance="fill">
+                <mat-label>Enter ID</mat-label>
+                <input matInput formControlName = "id" placeholder="Ex. Nougat">
+            </mat-form-field>
+    
+            <button mat-raised-button color="warn" style="display: block; width: 300px;" type="submit">Start</button>
+        </form>
+    </mat-card>
+</div>

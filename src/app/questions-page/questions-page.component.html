@@ -1,0 +1,10 @@
+<section class="head">
+    <app-header (timeOver) = "timeOver($event)"></app-header>
+</section>
+<div class="full" style="margin-top: 100px;">
+    <app-question *ngFor="let question of questions" [question] = "question" (selectedAnswer) = "onAnswerSelected(question.index, $event)"></app-question>
+</div>
+
+<div class="btns" style="text-align: center;">
+    <button mat-raised-button color="warn" style="width: 300px; margin-bottom: 50px;" type="button" (click) = "displayResult()">Submit</button>
+</div>
