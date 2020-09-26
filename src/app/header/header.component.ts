@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
     this.startTimer();
   }
 
-  //starts counting
+  //starts counting, display result after time countdown = 0
   private startTimer(){
     const source = timer(0,1000);
     var t = source.subscribe(val => {
@@ -37,6 +37,6 @@ export class HeaderComponent implements OnInit {
     
   }
 
-  public timeLeft: number = 60*2; //5 minutes
+  public timeLeft: number = 60*5; //5 minutes
   public timeDisplayer: string = "";
 }
